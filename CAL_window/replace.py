@@ -1,0 +1,14 @@
+
+import string
+
+with open("SHMSADCGates.C", "r") as file:
+    line = file.read()
+
+line = line.replace("[14]", "[224]")
+#line = line.replace("P_ngcer_adc","P_precal_negAdc")
+#line = line.replace("P_ngcer_good","P_precal_goodNeg")
+#line = line.replace("neg","pos")
+#line = line.replace("Neg","Pos")
+
+with open("SHMSADCGates.C", "w") as file:
+    file.write(line)
